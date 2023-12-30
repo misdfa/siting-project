@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Новым Годом</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     }  
+     .header {
+    width: 100%;
+    height: 100vh;
+    background: url(header1.jpg) no-repeat center;
+    background-size: cover;
+     }
+     
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="particles-js">
+    <div class="greeting">
+        <h1>C Новым Годом!</h1>
+        
+    </div>
+    </header>
+ 
+    <style>
+      h1{
+          text-align: center;
+         font-size: 80px;
+         font-family: 'Marck Script', cursive;
+          color: white;
+          margin-top:50px;
+      }
+ .greeting {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+
+ }
+ .greeting h1 {
+font-family: 'Gloria Hallelujah', cursive;
+font-size: 150px;
+text-shadow: 2px 2px 2px #EC6856;
+ }
+      body{
+          background: #D27A82;
+      }
+      
+      .container{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url(guitar.png) no-repeat  center center;
+          background-size: cover;
+           height: 500px;
+          width: 1010px;
+          margin: auto;
+          
+          
+      }
+   
+      .btn button{
+          width: 140px;
+          margin: 23px;
+          padding: 12px;
+          background-color: #AFB1D0;
+          border: none;
+          border-radius: 12px;
+          font-size: 25px;
+          cursor: pointer;
+        
+      }
+  </style>
+
+
+  <h1 style="font-size: 100px;"> Плеер <br>музыкальный</h1>
+  <div class="container">
+      <div class="btn">
+          <button style=  "color: white;"   id="play">Play 
+             
+</button>
+      </div>
+      <div class="btn">
+          <button style=  "color: white;"  id="pause">Pause</button>
+      </div>
+  </div>
+  
+
+
+  <script src="particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+  </script>
+  <script>
+    let play = document.getElementById('play');
+    let pause = document.getElementById('pause');
+    let audio = new Audio('Музыка.mp3');
+
+    play.addEventListener('click', ()=>{
+        audio.play();
+    })
+    pause.addEventListener('click', ()=>{
+        audio.pause();
+    })
+</script>
+</body>
+
+</html>
